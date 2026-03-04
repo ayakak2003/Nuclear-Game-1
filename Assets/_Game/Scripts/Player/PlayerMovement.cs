@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = moveVelocity; 
+        rb.linearVelocity = moveVelocity; 
     }
 
     private void TryInteract()

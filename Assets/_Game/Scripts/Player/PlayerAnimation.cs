@@ -25,7 +25,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         // 1. Check if we are moving based on the Rigidbody velocity
         // We use sqrMagnitude because it is faster than calculating the square root
-        bool isMoving = _rb.velocity.sqrMagnitude > 0.01f;
+        bool isMoving = _rb.linearVelocity.sqrMagnitude > 0.01f;
 
         // 2. Tell the animator if we are walking or not
         _animator.SetBool(IsMoving, isMoving);
@@ -34,7 +34,7 @@ public class PlayerAnimation : MonoBehaviour
         if (isMoving)
         {
             // Normalize the vector so diagonal speed doesn't mess up the blend weight
-            Vector2 direction = _rb.velocity.normalized;
+            Vector2 direction = _rb.linearVelocity.normalized;
 
             _animator.SetFloat(InputX, direction.x);
             _animator.SetFloat(InputY, direction.y);
