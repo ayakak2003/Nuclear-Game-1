@@ -9146,7 +9146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &958817221
 Transform:
   m_ObjectHideFlags: 0
@@ -14375,7 +14375,7 @@ GameObject:
   - component: {fileID: 1620854725}
   - component: {fileID: 1620854724}
   - component: {fileID: 1620854723}
-  - component: {fileID: 1620854722}
+  - component: {fileID: 1620854728}
   m_Layer: 0
   m_Name: computer
   m_TagString: Untagged
@@ -14400,42 +14400,6 @@ Transform:
   - {fileID: 1035188898}
   m_Father: {fileID: 935054864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1620854722
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1620854720}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.40794352}
-  m_Radius: 1.9741013
 --- !u!61 &1620854723
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14494,7 +14458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24b4ad3e903c1f4c843187e680aeb41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _conversation: {fileID: 0}
+  _conversation: {fileID: 1620854725}
 --- !u!114 &1620854725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14586,7 +14550,7 @@ MonoBehaviour:
   OnInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1620854724}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: StartDialogue
         m_Mode: 1
@@ -14601,7 +14565,7 @@ MonoBehaviour:
   onPlayerExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1620854724}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: EndConversation
         m_Mode: 1
@@ -14668,6 +14632,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1620854728
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620854720}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.25, y: 3.85}
+    newSize: {x: 5.25, y: 3.85}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 5.25, y: 3.85}
+  m_EdgeRadius: 0
 --- !u!1 &1639984548
 GameObject:
   m_ObjectHideFlags: 0
@@ -15495,7 +15505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3890132258001473771, guid: 54d9260478540d643b0bbc047f24e4e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8179638
+      value: -2.31
       objectReference: {fileID: 0}
     - target: {fileID: 3890132258001473771, guid: 54d9260478540d643b0bbc047f24e4e9, type: 3}
       propertyPath: m_LocalPosition.z
